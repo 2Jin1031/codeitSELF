@@ -1,9 +1,12 @@
-function User(email, birthdate) {
-    this.email = email;
-    this.birthdate = birthdate;
-    this.buy = function(item) {
+class User {
+    constructor(email, birthdate) {
+        this.email = email;
+        this.birthdate = birthdate;
+    }
+
+    buy(item) {
         console.log(`${this.email} buys ${item.name}`);
-    };
+    }
 }
 
 const item = {
@@ -20,3 +23,4 @@ console.log(user2.email);
 console.log(user3.email);
 console.log(user1.birthdate);
 user1.buy(item);
+user2.buy(item);
